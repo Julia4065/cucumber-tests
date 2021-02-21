@@ -8,7 +8,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.qameta.allure.Allure;
-import io.qameta.allure.model.Status;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -28,6 +27,7 @@ public class GoogleSearchSteps_PageFactory {
     @Before()
 //здесь то что в set up
     public void browserSetup() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
     }
